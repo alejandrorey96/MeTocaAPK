@@ -6,50 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".NumTurno">
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageView
+        android:id="@+id/MeToca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0000"
-        android:textSize="175sp"
+        android:background="@drawable/metoca"
+        android:rotation="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248" />
+        tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Contador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tu turno está cerca"
+        android:textSize="175sp"
+        android:textColor="@color/purple_700"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/Aviso1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="45sp"
+        android:text="Todavía no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintTop_toBottomOf="@+id/Contador"
+        app:layout_constraintVertical_bias="0.1000000" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Aviso2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Me Toca!"
         android:textSize="75sp"
+        android:text="No me toca"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/Aviso1" />
 
-    <TextView
-        android:id="@+id/Texto01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
