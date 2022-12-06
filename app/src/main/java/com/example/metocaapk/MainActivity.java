@@ -1,8 +1,10 @@
 package com.example.metocaapk;
 
+import android.content.Intent;
 import android.os.StrictMode;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,20 +20,25 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView pantalla;
+    //private TextView pantalla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pantalla = (TextView) findViewById(R.id.Texto01);
+        /*pantalla = (TextView) findViewById(R.id.Texto01);
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                 .permitNetwork().build());
-        ejecutaCliente();
+        ejecutaCliente();*/
     }
 
-    private void ejecutaCliente(){
-        String ip = "172.217.162.4";
+    public void onButtonPressed(View view) {
+        Intent intent = new Intent(this,NumTurno.class);
+        startActivity(intent);
+    }
+
+    /*private void ejecutaCliente(){
+        String ip = "192.168.0.26";
         int puerto = 7;
         log(" socket " + ip + " " + puerto);
         try{
@@ -48,9 +55,10 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e){
             log("error: " + e.toString());
         }
-    }
+    }*/
 
-    private void log(String cadena){
+    /*private void log(String cadena){
         pantalla.append(cadena + "\n");
-    }
+    }*/
+
 }
